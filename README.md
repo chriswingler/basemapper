@@ -1,6 +1,6 @@
 # BaseMapper
 
-A powerful Python tool that maps your entire codebase into a single, navigable document. BaseMapper recursively traverses your project directory, creates a clean directory hierarchy, and includes the contents of all non-binary files not excluded by patterns.
+A powerful Python tool that maps your entire codebase into a single, navigable document. BaseMapper recursively traverses your project directory, creates a clean directory hierarchy, and includes the contents of all files not excluded in a .bmignore file.
 
 ## Features
 
