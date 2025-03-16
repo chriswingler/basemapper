@@ -11,36 +11,6 @@ A powerful Python tool that maps your entire codebase into a single, navigable d
 - 🔗 **Navigation Links** - Markdown output includes clickable links for easy navigation
 - 🔄 **Cross-Platform** - Works on Windows, macOS, and Linux
 
-## Installation
-
-### Option 1: Install from PyPI (Recommended)
-
-```bash
-pip install basemapper
-```
-
-After installation, you can run the tool directly:
-
-```bash
-basemapper [directory_path] [output_file] [bmignore_file] [--raw]
-```
-
-### Option 2: Clone the Repository
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/basemapper.git
-
-# Navigate to the directory
-cd basemapper
-
-# Install the package
-pip install .
-
-# Or, for development mode
-pip install -e .
-```
-
 ## Usage
 
 ```bash
