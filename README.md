@@ -11,8 +11,31 @@ A powerful Python tool that maps your entire codebase into a single, navigable d
 - 🔗 **Navigation Links** - Markdown output includes clickable links for easy navigation
 - 🔄 **Cross-Platform** - Works on Windows, macOS, and Linux
 
+## Installation
+
+To install BaseMapper, clone this repository and run the following command from the root of the project directory:
+
+```bash
+pip install .
+```
+
+This will install the `basemapper` command-line tool.
+
+For development, you can install it in editable mode:
+
+```bash
+pip install -e .
+```
+
 ## Usage
 
+After installation, you can run BaseMapper directly from your terminal:
+
+```bash
+basemapper [directory_path] [output_file] [bmignore_file] [--raw]
+```
+
+You can also run the script directly (if you haven't installed the package or for development purposes):
 ```bash
 python basemapper.py [directory_path] [output_file] [bmignore_file] [--raw]
 ```
@@ -26,15 +49,16 @@ python basemapper.py [directory_path] [output_file] [bmignore_file] [--raw]
 
 ### Examples:
 
+Using the installed command:
 ```bash
 # Map the current directory to the default output file
-python basemapper.py
+basemapper
 
 # Map a specific directory to a custom output file
-python basemapper.py /path/to/project project_map.md
+basemapper /path/to/project project_map.md
 
 # Use a specific .bmignore file and generate both Markdown and raw text
-python basemapper.py /path/to/project project_map.md /path/to/custom.bmignore --raw
+basemapper /path/to/project project_map.md /path/to/custom.bmignore --raw
 ```
 
 ## Exclusion Patterns (.bmignore)
