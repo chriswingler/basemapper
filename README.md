@@ -11,8 +11,85 @@ A powerful Python tool that maps your entire codebase into a single, navigable d
 - 🔗 **Navigation Links** - Markdown output includes clickable links for easy navigation
 - 🔄 **Cross-Platform** - Works on Windows, macOS, and Linux
 
+## Installation
+
+BaseMapper can be installed in several ways depending on your system configuration and preferences.
+
+### Option 1: Using pipx (Recommended)
+
+[pipx](https://pypa.github.io/pipx/) is the recommended way to install Python applications. It automatically manages virtual environments and makes the command available globally:
+
+```bash
+# Install pipx if not already installed
+sudo apt install pipx  # On Ubuntu/Debian
+# or
+brew install pipx      # On macOS
+# or
+pip install --user pipx  # Cross-platform
+
+# Install BaseMapper
+pipx install .
+```
+
+After installation, `basemapper` will be available globally in your terminal.
+
+### Option 2: Using Virtual Environment
+
+If you encounter "externally-managed-environment" errors (common on modern Linux systems), use a virtual environment:
+
+```bash
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Linux/macOS
+# or
+venv\Scripts\activate     # On Windows
+
+# Install BaseMapper
+pip install .
+
+# Use the tool
+basemapper [options]
+
+# Or run directly without activation
+./venv/bin/basemapper [options]  # Linux/macOS
+venv\Scripts\basemapper [options]  # Windows
+```
+
+### Option 3: System-wide Installation
+
+⚠️ **Warning**: Only use this if you understand the implications and your system allows it.
+
+```bash
+pip install .
+```
+
+If you get an "externally-managed-environment" error, you can override it (not recommended):
+
+```bash
+pip install . --break-system-packages
+```
+
+### Development Installation
+
+For development, install in editable mode using any of the above methods:
+
+```bash
+# With pipx
+pipx install -e .
+
+# With virtual environment
+pip install -e .
+```
+
 ## Usage
 
+After installation, you can run BaseMapper directly from your terminal:
+
+```bash
+basemapper [directory_path] [output_file] [bmignore_file] [--raw]
+```
+
+You can also run the script directly (if you haven't installed the package or for development purposes):
 ```bash
 python basemapper.py [directory_path] [output_file] [bmignore_file] [--raw]
 ```
@@ -26,15 +103,16 @@ python basemapper.py [directory_path] [output_file] [bmignore_file] [--raw]
 
 ### Examples:
 
+Using the installed command:
 ```bash
 # Map the current directory to the default output file
-python basemapper.py
+basemapper
 
 # Map a specific directory to a custom output file
-python basemapper.py /path/to/project project_map.md
+basemapper /path/to/project project_map.md
 
 # Use a specific .bmignore file and generate both Markdown and raw text
-python basemapper.py /path/to/project project_map.md /path/to/custom.bmignore --raw
+basemapper /path/to/project project_map.md /path/to/custom.bmignore --raw
 ```
 
 ## Exclusion Patterns (.bmignore)
@@ -141,4 +219,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.

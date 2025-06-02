@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basemapper"
+version = "0.1.0"
+authors = [
+  { name="Your Name", email="you@example.com" }, # Placeholder
+]
+description = "A tool to map directory structures and file contents to Markdown."
+readme = "README.md" # Assuming a README.md will exist or be created.
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # Assuming MIT, will verify license later
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+]
+dependencies = [
+    # No external dependencies for now, as basemapper.py uses only stdlib
+]
+
+[project.scripts]
+basemapper = "basemapper:main"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/basemapper" # Placeholder
+"Bug Tracker" = "https://github.com/yourusername/basemapper/issues" # Placeholder

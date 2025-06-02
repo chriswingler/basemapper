@@ -32,6 +32,7 @@ import os
 import sys
 import fnmatch
 import pathlib
+import re # Added import for regular expressions
 from typing import List, Tuple, Dict, Set, Optional, Any
 from datetime import datetime
 
@@ -224,21 +225,12 @@ def create_file_id(file_path: str) -> str:
     Returns:
         A safe anchor ID for use in HTML/Markdown
     """
-    # Replace problematic characters with underscores
-    safe_id = file_path.replace('/', '_').replace('\\', '_')
-    safe_id = safe_id.replace('.', '_').replace(' ', '_')
-    safe_id = safe_id.replace('(', '_').replace(')', '_')
-    safe_id = safe_id.replace('[', '_').replace(']', '_')
-    safe_id = safe_id.replace('{', '_').replace('}', '_')
-    safe_id = safe_id.replace(':', '_').replace(';', '_')
-    safe_id = safe_id.replace(',', '_').replace('\'', '_')
-    safe_id = safe_id.replace('"', '_').replace('`', '_')
-    safe_id = safe_id.replace('!', '_').replace('@', '_')
-    safe_id = safe_id.replace('#', '_').replace('$', '_')
-    safe_id = safe_id.replace('%', '_').replace('^', '_')
-    safe_id = safe_id.replace('&', '_').replace('*', '_')
-    safe_id = safe_id.replace('+', '_').replace('=', '_')
-    safe_id = safe_id.replace('|', '_').replace('~', '_')
+    # Define the pattern for characters to be replaced
+    # Characters: / \ . ( ) [ ] { } : ; , ' " ` ! @ # $ % ^ & * + = | ~ and space
+    pattern = r"[/\.\\\s\(\)\[\]\{\}:;,'\"`!@#\$%\^&\*\+=\|~]"
+
+    # Replace problematic characters with underscores using re.sub()
+    safe_id = re.sub(pattern, "_", file_path)
     
     # Ensure the ID is lowercase for consistency and add a prefix to avoid conflicts
     return f"file_{safe_id.lower()}"
