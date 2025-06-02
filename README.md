@@ -13,17 +13,71 @@ A powerful Python tool that maps your entire codebase into a single, navigable d
 
 ## Installation
 
-To install BaseMapper, clone this repository and run the following command from the root of the project directory:
+BaseMapper can be installed in several ways depending on your system configuration and preferences.
+
+### Option 1: Using pipx (Recommended)
+
+[pipx](https://pypa.github.io/pipx/) is the recommended way to install Python applications. It automatically manages virtual environments and makes the command available globally:
+
+```bash
+# Install pipx if not already installed
+sudo apt install pipx  # On Ubuntu/Debian
+# or
+brew install pipx      # On macOS
+# or
+pip install --user pipx  # Cross-platform
+
+# Install BaseMapper
+pipx install .
+```
+
+After installation, `basemapper` will be available globally in your terminal.
+
+### Option 2: Using Virtual Environment
+
+If you encounter "externally-managed-environment" errors (common on modern Linux systems), use a virtual environment:
+
+```bash
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Linux/macOS
+# or
+venv\Scripts\activate     # On Windows
+
+# Install BaseMapper
+pip install .
+
+# Use the tool
+basemapper [options]
+
+# Or run directly without activation
+./venv/bin/basemapper [options]  # Linux/macOS
+venv\Scripts\basemapper [options]  # Windows
+```
+
+### Option 3: System-wide Installation
+
+⚠️ **Warning**: Only use this if you understand the implications and your system allows it.
 
 ```bash
 pip install .
 ```
 
-This will install the `basemapper` command-line tool.
-
-For development, you can install it in editable mode:
+If you get an "externally-managed-environment" error, you can override it (not recommended):
 
 ```bash
+pip install . --break-system-packages
+```
+
+### Development Installation
+
+For development, install in editable mode using any of the above methods:
+
+```bash
+# With pipx
+pipx install -e .
+
+# With virtual environment
 pip install -e .
 ```
 
@@ -165,4 +219,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
