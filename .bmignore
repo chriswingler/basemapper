@@ -1,0 +1,172 @@
+# Git and project meta files
+.gitignore
+.gitattributes
+LICENSE
+LICENSE.*
+COPYING
+COPYING.*
+
+# Build artifacts and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.dylib
+*.egg-info/
+*.egg
+dist/
+build/
+wheels/
+*.whl
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+virtualenv/
+pipenv/
+.Python
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.project
+.pydevproject
+.settings/
+.classpath
+*.sublime-*
+
+# Testing and coverage
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.tox/
+htmlcov/
+.nox/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+site/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Package manager files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment and secrets
+.env
+.env.*
+*.env
+secrets/
+credentials/
+*.key
+*.pem
+*.cert
+
+# Large data files
+*.csv
+*.dat
+*.data
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.arrow
+
+# Media files
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.webp
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.bz2
+*.gz
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+.cache/
+
+# Machine learning models
+*.model
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+models/
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+cython_debug/

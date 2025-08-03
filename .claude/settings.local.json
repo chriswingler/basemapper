@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(basemapper:*)",
+      "Bash(where:*)",
+      "Bash(python:*)",
+      "Bash(dir)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}
